@@ -4,12 +4,12 @@ import { getCurrentUser, logoutUser, isAdmin } from '../js/auth.js';
 export async function showDashboard() {
   const app = document.getElementById('app');
   const user = getCurrentUser();
-
+  // here say that if user is diferent the website return to login without recharge the current page
   if (!user) {
     window.location.hash = '#/login';
     return;
   }
-
+  
   let events = [];
   try {
     events = await getEvents();
@@ -20,7 +20,7 @@ export async function showDashboard() {
 
   app.innerHTML = `
     <section class="dashboard">
-      <div style="display:flex; justify-content:space-between; align-items:center;">
+
         <h2>Bienvenido, ${user.name}</h2>
         <button id="logoutBtn" class="logout">Cerrar sesión</button>
       </div>
@@ -34,7 +34,7 @@ export async function showDashboard() {
     logoutUser();
     window.location.hash = '#/login';
   });
-
+ 
   document.querySelectorAll('.register-btn').forEach(btn => {
     btn.addEventListener('click', async (e) => {
       const eventId = e.target.dataset.eventId;
@@ -74,7 +74,7 @@ function renderEvent(event, user) {
 
       ${
         isAdmin()
-          ? `<a href="#/dashboard/events/edit?id=${event.id}">✏️ Editar</a>`
+          ? `<a href="#/dashboard/events/edit?id=${event.id}"> edit</a>`
           : ''
       }
     </div>

@@ -6,27 +6,27 @@ import { isAdmin } from '../js/auth.js';
 export async function showEditEvent() {
   const app = document.getElementById('app');
 
-  // Extraer ID desde hash: #/dashboard/events/edit?id=1
+  // Extraer that ID from hash: #/dashboard/events/editar?id=1
   const params = new URLSearchParams(window.location.hash.split('?')[1]);
   const eventId = params.get('id');
-
+   //here say tha admin is diferent at admin-user
   if (!isAdmin()) {
     window.location.hash = '#/not-found';
     return;
   }
-
+    //here say that if ID by event is diferent print one block of html
   if (!eventId) {
-    app.innerHTML = '<p>Error: ID del evento no especificado.</p>';
+    app.innerHTML = '<p>eror: ID del evento no esta bien diligenciada.</p>';
     return;
   }
-
+     
   try {
     const event = await getEventById(eventId);
     if (!event) {
-      app.innerHTML = '<p>Evento no encontrado.</p>';
+      app.innerHTML = '<p>event not are found.</p>';
       return;
     }
-
+      
     app.innerHTML = `
       <section class="edit-event">
         <h2>Editar Evento</h2>
@@ -47,7 +47,7 @@ export async function showEditEvent() {
         </form>
       </section>
     `;
-
+    // through the element by the DOM give the function of listen event(edit)
     document.getElementById('edit-event-form').addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -57,17 +57,17 @@ export async function showEditEvent() {
         location: document.getElementById('location').value.trim(),
         capacity: parseInt(document.getElementById('capacity').value),
       };
-
+      //this function try to update a event by your ID and caught the mistake in other case tha condition be invalid and print a console.log
       try {
         await updateEvent(event.id, updatedEvent);
         alert("Evento actualizado correctamente.");
         window.location.hash = '#/dashboard';
       } catch (error) {
-        alert("Error al actualizar el evento.");
+        alert("mistake at the moment of update event.");
         console.error(error);
       }
     });
-
+      // renderisa un bloque html que nos muestra que ocurrio un error al cargar el evento
   } catch (err) {
     console.error("Error cargando evento:", err);
     app.innerHTML = `<p class="error">Hubo un problema al cargar el evento.</p>`;

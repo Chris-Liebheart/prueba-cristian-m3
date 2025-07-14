@@ -1,6 +1,6 @@
 const API_BASE = 'http://localhost:3000';
 
-/* Obtener todos los eventos */
+/* get all events */
 export async function getEvents() {
   const res = await fetch(`${API_BASE}/events`);
   if (!res.ok) throw new Error('Error al obtener eventos');
@@ -14,21 +14,21 @@ export async function getEventById(id) {
   return await res.json();
 }
 
-/* Crear un nuevo evento */
+// Create new event
 export async function createEvent(eventData) {
   const res = await fetch(`${API_BASE}/events`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       ...eventData,
-      registeredUsers: [] // Inicializar array vacío
+      registeredUsers: [] // begin empty array
     }),
   });
   if (!res.ok) throw new Error('Error al crear el evento');
   return await res.json();
 }
 
-/* Actualizar un evento existente */
+// update a event existing
 export async function updateEvent(id, data) {
   const res = await fetch(`${API_BASE}/events/${id}`, {
     method: 'PATCH',
@@ -39,7 +39,7 @@ export async function updateEvent(id, data) {
   return await res.json();
 }
 
-/* Eliminar un evento */
+//delete element
 export async function deleteEvent(id) {
   const res = await fetch(`${API_BASE}/events/${id}`, {
     method: 'DELETE',
@@ -47,7 +47,7 @@ export async function deleteEvent(id) {
   if (!res.ok) throw new Error('Error al eliminar el evento');
 }
 
-/* Registrar usuario visitante a un evento */
+//* Registrar usuario visitante a un evento
 export async function registerUserToEvent(eventId, userId) {
   const event = await getEventById(eventId);
 

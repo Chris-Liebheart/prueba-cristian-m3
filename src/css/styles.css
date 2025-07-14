@@ -10,7 +10,7 @@
 body {
   background-color: #fef6f9;
   color: #333;
-  padding: 20px;
+  padding: 18px;
   display: flex;
   justify-content: center;
 }
@@ -27,7 +27,7 @@ body {
 
 /* Titles */
 h2, h3 {
-  color: #6a5acd;
+  color: #150770;
   margin-bottom: 16px;
 }
 
