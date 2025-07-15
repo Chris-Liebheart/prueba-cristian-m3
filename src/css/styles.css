@@ -6,7 +6,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* General body */
+/*body*/
 body {
   background-color: #fef6f9;
   color: #333;
@@ -15,7 +15,7 @@ body {
   justify-content: center;
 }
 
-/* Main container */
+/* Main container*/
 #app {
   width: 100%;
   max-width: 700px;
@@ -27,13 +27,13 @@ body {
 
 /* Titles */
 h2, h3 {
-  color: #150770;
-  margin-bottom: 16px;
+  color: #12acc7;
+  margin-bottom: 14px;
 }
 
-/* Paragraphs */
+/* Parafos*/
 p {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 /* Forms */
@@ -56,7 +56,7 @@ input[type="date"] {
   font-size: 1em;
 }
 
-/* General button style */
+/* ramdom button style */
 button {
   padding: 10px 14px;
   border: none;
@@ -69,10 +69,10 @@ button {
 }
 
 button:hover {
-  background-color: #ff9aa2;
+  background-color: #f0f0f0;
 }
 
-/* Logout button */
+/* Logout butt*/
 .logout {
   background-color: #f44336;
   color: white;
@@ -91,7 +91,7 @@ a {
   display: inline-block;
   margin-top: 12px;
   text-decoration: none;
-  color: #6a5acd;
+  color: #32cfe4;
   font-size: 0.95em;
 }
 
@@ -104,7 +104,7 @@ a {
   margin-top: 20px;
 }
 
-/* Card for each event */
+/* Card for each event*/
 .event-card {
   background-color: #fff0f5;
   padding: 16px;
@@ -139,7 +139,7 @@ a {
   margin-top: 8px;
 }
 
-/* Not Found */
+/* Not Found*/
 #not-found {
   text-align: center;
   padding: 40px 20px;
@@ -176,8 +176,6 @@ a {
   background-color: #ff9aa2;
 }
 
-
-/* ===================== Responsive ===================== */
 
 @media (max-width: 1064px) {
   #app {
@@ -219,6 +217,6 @@ a {
   }
 
   .event-card {
-    padding: 12px;
+    padding: 10px;
   }
 }

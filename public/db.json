@@ -13,6 +13,20 @@
       "email": "carlospro@gmail.com",
       "password": "carlitos123",
       "role": "user"
+    },
+    {
+      "id": "0c9b",
+      "name": "daniel",
+      "email": "danielpatricio@gmail.com",
+      "password": "holamundo",
+      "role": "user"
+    },
+    {
+      "id": "245a",
+      "name": "Cristian Alejandro Sobrino Hernandez",
+      "email": "sobrinocristianalejandro@gmail.com",
+      "password": "HOME",
+      "role": "user"
     }
   ],
   "events": [
@@ -22,7 +36,9 @@
       "date": "2025-08-10",
       "location": "Auditorio Bogotá",
       "capacity": 100,
-      "registeredUsers": ["0d54"]
+      "registeredUsers": [
+        "0d54"
+      ]
     },
     {
       "id": "102",
@@ -30,7 +46,7 @@
       "date": "2025-08-20",
       "location": "Cali Tech Hub",
       "capacity": 50,
-      "registeredUsers": [] 
+      "registeredUsers": []
     }
   ]
 }
