@@ -50,7 +50,7 @@ export function router() {
     return;
   }
 
-  // Si existe la ruta, ejecutarla
+  // aqui si la ruta existe entonces se ejecutara
   const render = routes[path];
   if (render) {
     render();
@@ -59,6 +59,6 @@ export function router() {
   }
 }
 
-// Escuchar cambios en el hash de la URL
+// hearing that changes in the hash URL
 window.addEventListener('hashchange', router);
 window.addEventListener('load', router);

@@ -37,7 +37,7 @@ export function showRegister() {
       password,
       role: "user"
     };
-     
+    //here this function try to wait the response and the alert give two options in two case
     try {
       await registerUser(newUser);
       alert("Registro exitoso. Inicia sesión.");
