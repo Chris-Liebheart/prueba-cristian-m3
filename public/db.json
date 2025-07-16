@@ -27,6 +27,27 @@
       "email": "sobrinocristianalejandro@gmail.com",
       "password": "HOME",
       "role": "user"
+    },
+    {
+      "id": "f34b",
+      "name": "alejandro",
+      "email": "alejandro@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "30c1",
+      "name": "cristian",
+      "email": "sobrino@gmail",
+      "password": "26",
+      "role": "user"
+    },
+    {
+      "id": "2d4f",
+      "name": "said",
+      "email": "said@gmail.com",
+      "password": "123",
+      "role": "user"
     }
   ],
   "events": [
@@ -37,7 +58,9 @@
       "location": "Auditorio Bogotá",
       "capacity": 100,
       "registeredUsers": [
-        "0d54"
+        "0d54",
+        "f34b",
+        "30c1"
       ]
     },
     {
@@ -46,7 +69,10 @@
       "date": "2025-08-20",
       "location": "Cali Tech Hub",
       "capacity": 50,
-      "registeredUsers": []
+      "registeredUsers": [
+        "f34b",
+        "30c1"
+      ]
     }
   ]
 }

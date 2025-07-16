@@ -10,6 +10,8 @@ import { isAuthenticated, isAdmin } from './auth.js';
 
 // Rutas base sin parámetros
 const routes = {
+  '' : showLogin,
+  '/' : showLogin,
   '#/login': showLogin,
   '#/register': showRegister,
   '#/dashboard': showDashboard,
@@ -45,10 +47,10 @@ export function router() {
   const publicRoutes = ['#/login', '#/register'];
 
   // Si no está autenticado y la ruta no es pública, redirigir a not-found
-  if (!isAuthenticated() && !publicRoutes.includes(path)) {
+  /*if (!isAuthenticated() && !publicRoutes.includes(path)) {
     window.location.hash = '#/not-found';
     return;
-  }
+  }*/
 
   // aqui si la ruta existe entonces se ejecutara
   const render = routes[path];
